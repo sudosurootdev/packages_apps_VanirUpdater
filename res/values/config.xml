@@ -7,8 +7,6 @@
      or at https://www.gnu.org/licenses/gpl-2.0.txt
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- CMUpdate Config Strings -->
-    <string name="conf_update_server_url_def" translatable="false">http://download.vanir.org/api</string>
-    <string name="conf_changelog_url" translatable="false">http://localhost/changelog.xml</string>
+    <string name="conf_update_server_url" translatable="false">http://www.emccann.net/nuclearmistake/VanirAOSPNightlies/</string>
     <bool name="alternateIsInternal">false</bool>
 </resources>

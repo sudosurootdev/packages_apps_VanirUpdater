@@ -79,7 +79,7 @@ public class UpdateCheckService extends IntentService {
     // max. number of updates listed in the expanded notification
     private static final int EXPANDED_NOTIF_UPDATE_COUNT = 4;
 
-    private HttpRequestExecutor mHttpExecutor;
+    //private HttpRequestExecutor mHttpExecutor;
 
     public UpdateCheckService() {
         super("UpdateCheckService");
@@ -88,11 +88,11 @@ public class UpdateCheckService extends IntentService {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         if (TextUtils.equals(intent.getAction(), ACTION_CANCEL_CHECK)) {
-            synchronized (this) {
+            /*synchronized (this) {
                 if (mHttpExecutor != null) {
                     mHttpExecutor.abort();
                 }
-            }
+            }*/
 
             return START_NOT_STICKY;
         }
@@ -102,9 +102,9 @@ public class UpdateCheckService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
-        synchronized (this) {
+        /*synchronized (this) {
             mHttpExecutor = new HttpRequestExecutor();
-        }
+        }*/
 
         if (!Utils.isOnline(this)) {
             // Only check for updates if the device is actually connected to a network
@@ -122,7 +122,7 @@ public class UpdateCheckService extends IntentService {
             availableUpdates = null;
         }
 
-        if (availableUpdates == null || mHttpExecutor.isAborted()) {
+        if (availableUpdates == null) {// || mHttpExecutor.isAborted()) {
             sendBroadcast(finishedIntent);
             return;
         }
@@ -231,35 +231,14 @@ public class UpdateCheckService extends IntentService {
     private LinkedList<UpdateInfo> getAvailableUpdatesAndFillIntent(Intent intent) throws IOException {
         // Get the type of update we should check for
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        int updateType = prefs.getInt(Constants.UPDATE_TYPE_PREF, 0);
-
-        // Get the actual ROM Update Server URL
-        URI updateServerUri = URI.create(getString(R.string.conf_update_server_url_def));
-        HttpPost request = new HttpPost(updateServerUri);
-
-        try {
-            JSONObject requestJson = buildUpdateRequest(updateType);
-            request.setEntity(new StringEntity(requestJson.toString()));
-        } catch (JSONException e) {
-            Log.e(TAG, "Could not build request", e);
-            return null;
-        }
-        addRequestHeaders(request);
-
-        HttpEntity entity = mHttpExecutor.execute(request);
-        if (entity == null || mHttpExecutor.isAborted()) {
-            return null;
-        }
+        //TODO handle releases too!
+        int updateType = prefs.getInt(Constants.UPDATE_TYPE_PREF, 0);        
+        //TODO remove this gross hack to include nightlies regardless of setting
+        updateType += (updateType % 2 == 0) ? 1 : 0;
 
         LinkedList<UpdateInfo> lastUpdates = State.loadState(this);
 
-        // Read the ROM Infos
-        String json = EntityUtils.toString(entity, "UTF-8");
-        LinkedList<UpdateInfo> updates = parseJSON(json, updateType);
-
-        if (mHttpExecutor.isAborted()) {
-            return null;
-        }
+        LinkedList<UpdateInfo> updates = getUpdateInfos(getString(R.string.conf_update_server_url)+Utils.getDeviceType()+"/", updateType);
 
         int newUpdates = 0, realUpdates = 0;
         for (UpdateInfo ui : updates) {
@@ -270,6 +249,7 @@ public class UpdateCheckService extends IntentService {
                 realUpdates++;
             }
         }
+        Log.d(TAG, "Found: "+newUpdates+" NEW and "+realUpdates+" REAL updates");
 
         intent.putExtra(EXTRA_UPDATE_COUNT, updates.size());
         intent.putExtra(EXTRA_REAL_UPDATE_COUNT, realUpdates);
@@ -280,7 +260,54 @@ public class UpdateCheckService extends IntentService {
         return updates;
     }
 
-    private JSONObject buildUpdateRequest(int updateType) throws JSONException {
+    private LinkedList<UpdateInfo> getUpdateInfos(String url, int updateType) {
+        boolean includeAll = updateType == Constants.UPDATE_TYPE_ALL_STABLE
+            || updateType == Constants.UPDATE_TYPE_ALL_NIGHTLY;
+        Log.d(TAG, "Looking for updates at "+url+"vanir_update_list");
+        LinkedList<String> versions = Utils.readMultilineFile(url+"vanir_updater_list");
+        LinkedList<UpdateInfo> infos = new LinkedList<UpdateInfo>();        
+        for (String v : versions) {
+            Log.d(TAG, "Fetching info for build "+v);
+            UpdateInfo ui = getUpdateInfo(url, v);
+            if (ui != null) {
+                if (!includeAll && !ui.isNewerThanInstalled()) {
+                     Log.d(TAG, "Build " + ui.getFileName() + " is older than the installed build");
+                     continue;
+                }
+                infos.add(ui);
+            } else {
+                Log.e(TAG, "getUpdateInfo returned null UpdateInfo");
+            }
+        }
+        return infos;
+    }
+
+    private UpdateInfo getUpdateInfo(String urlBase, String version) {
+        Log.v(TAG, "getting update info for: "+urlBase+version+"*");
+        UpdateInfo ui = null;
+        String md5sum = Utils.readFile(urlBase+version+".md5sum");
+        if (md5sum == null) md5sum = Utils.readFile(urlBase+version+".md5");
+        String utcStr = Utils.readFile(urlBase+version+".utc");
+        String apiStr = Utils.readFile(urlBase+version+".api");
+        if (md5sum != null && utcStr != null && apiStr != null) {
+            Log.i(TAG, version+" INFO -- md5:"+md5sum+" utc:"+utcStr+" api:"+apiStr);
+            try {
+                long utc = Long.valueOf(utcStr).longValue();
+                int api = Integer.valueOf(apiStr).intValue();
+                ui = new UpdateInfo(version+".zip", utc, api, urlBase+version+".zip", md5sum, UpdateInfo.Type.NIGHTLY);
+            } catch (Exception anyexception) {
+                Log.e(TAG, "getUpdateInfo()", anyexception);
+            }
+        } else {
+            if (md5sum == null) Log.w(TAG, version+": NO MD5");
+            if (utcStr == null) Log.w(TAG, version+": NO DATE");
+            if (apiStr == null) Log.w(TAG, version+": NO API LEVEL");
+        }
+        
+        return ui;
+    }
+
+    /*private JSONObject buildUpdateRequest(int updateType) throws JSONException {
         JSONArray channels = new JSONArray();
         channels.put("stable");
         channels.put("snapshot");
@@ -489,5 +516,5 @@ public class UpdateCheckService extends IntentService {
         public synchronized boolean isAborted() {
             return mAborted;
         }
-    }
+    }*/
 }
