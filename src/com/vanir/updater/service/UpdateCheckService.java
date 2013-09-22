@@ -285,8 +285,8 @@ public class UpdateCheckService extends IntentService {
     private UpdateInfo getUpdateInfo(String urlBase, String version) {
         Log.v(TAG, "getting update info for: "+urlBase+version+"*");
         UpdateInfo ui = null;
-        String md5sum = Utils.readFile(urlBase+version+".md5sum");
-        if (md5sum == null) md5sum = Utils.readFile(urlBase+version+".md5");
+        String md5sum = Utils.readFile(urlBase+version+".zip.md5");
+        if (md5sum == null) md5sum = Utils.readFile(urlBase+version+".zip.md5sum");
         String utcStr = Utils.readFile(urlBase+version+".utc");
         String apiStr = Utils.readFile(urlBase+version+".api");
         if (md5sum != null && utcStr != null && apiStr != null) {
