@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012 The CyanogenMod Project
+<!-- Copyright (C) 2012 The Vanir Project
 
      Licensed under the GNU GPLv2 license
 
@@ -75,14 +75,14 @@
     <string name="no_changelog_alert">无可用的更改记录</string>
     <string name="failed_to_load_changelog">无法读取更改记录</string>
     <string name="changelog_dialog_title">更改记录</string>
-    <string name="extension_label">CyanogenMod 更新</string>
+    <string name="extension_label">Vanir 更新</string>
     <string name="extension_description">显示有多少个可用的新更新.</string>
     <plurals name="extension_status">
         <item quantity="one"><xliff:g id="count">%d</xliff:g> 个更新</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> 个更新</item>
     </plurals>
     <plurals name="extension_expandedTitle">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> 个 CyanogenMod 更新</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> 个 CyanogenMod 更新</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> 个 Vanir 更新</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> 个 Vanir 更新</item>
     </plurals>
 </resources>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012 The CyanogenMod Project
+<!-- Copyright (C) 2012 The Vanir Project
 
      Licensed under the GNU GPLv2 license
 
@@ -84,14 +84,14 @@
     <string name="not_download_failure">Päivityksen lataaminen epäonnistui</string>
     <string name="not_action_install_update">Käynnistä uudelleen ja asenna</string>
     <string name="not_download_install_notice">Päivityksen <xliff:g id="filename">%s</xliff:g> lataaminen onnistui. Kun painat \'Käynnistä uudelleen ja asenna\', laite käynnistyy uudelleen ja asenta päivityksen.\n\nHuomautus: Tämä ominaisuus tarvitsee yhteensopivan Recoveryn tai päivitykset eivät asennu automaattisesti.</string>
-    <string name="extension_label">CyanogenMod-päivitykset</string>
+    <string name="extension_label">Vanir-päivitykset</string>
     <string name="extension_description">Näyttää uusien saatavilla olevien päivitysten määrän.</string>
     <plurals name="extension_status">
         <item quantity="one"><xliff:g id="count">%d</xliff:g> päivitys</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> päivitystä</item>
     </plurals>
     <plurals name="extension_expandedTitle">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> CyanogenMod-päivitys</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> CyanogenMod-päivitystä</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> Vanir-päivitys</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> Vanir-päivitystä</item>
     </plurals>
 </resources>

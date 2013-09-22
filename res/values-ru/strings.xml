@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012 The CyanogenMod Project
+<!-- Copyright (C) 2012 The Vanir Project
 
      Licensed under the GNU GPLv2 license
 
@@ -110,7 +110,7 @@
     <string name="loading_changelog">Загрузка\u2026</string>
 
     <!-- DashClock extension strings -->
-    <string name="extension_label">Обновления CyanogenMod</string>
+    <string name="extension_label">Обновления Vanir</string>
     <string name="extension_description">Показывает количество доступных обновлений</string>
     <plurals name="extension_status">
         <item quantity="one">Доступно <xliff:g id="count">%d</xliff:g> обновление системы</item>
@@ -118,8 +118,8 @@
         <item quantity="other">Доступно <xliff:g id="count">%d</xliff:g> обновлений системы</item>
     </plurals>
     <plurals name="extension_expandedTitle">
-        <item quantity="one">Доступно <xliff:g id="count">%d</xliff:g> обновление CyanogenMod</item>
-        <item quantity="few">Доступно <xliff:g id="count">%d</xliff:g> обновления CyanogenMod</item>
-        <item quantity="other">Доступно <xliff:g id="count">%d</xliff:g> обновлений CyanogenMod</item>
+        <item quantity="one">Доступно <xliff:g id="count">%d</xliff:g> обновление Vanir</item>
+        <item quantity="few">Доступно <xliff:g id="count">%d</xliff:g> обновления Vanir</item>
+        <item quantity="other">Доступно <xliff:g id="count">%d</xliff:g> обновлений Vanir</item>
     </plurals>
 </resources>

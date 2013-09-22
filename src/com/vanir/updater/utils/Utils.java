@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 The CyanogenMod Project
+ * Copyright (C) 2013 The Vanir Project
  *
  * * Licensed under the GNU GPLv2 license
  *
@@ -7,7 +7,7 @@
  * or at https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-package com.cyanogenmod.updater.utils;
+package com.vanir.updater.utils;
 
 import android.app.AlarmManager;
 import android.app.NotificationManager;
@@ -28,9 +28,9 @@ import android.os.storage.StorageVolume;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.cyanogenmod.updater.R;
-import com.cyanogenmod.updater.misc.Constants;
-import com.cyanogenmod.updater.service.UpdateCheckService;
+import com.vanir.updater.R;
+import com.vanir.updater.misc.Constants;
+import com.vanir.updater.service.UpdateCheckService;
 
 import java.io.File;
 import java.io.IOException;
@@ -54,11 +54,11 @@ public class Utils {
     }
 
     public static String getDeviceType() {
-        return SystemProperties.get("ro.cm.device");
+        return SystemProperties.get("ro.product.device");
     }
 
     public static String getInstalledVersion() {
-        return SystemProperties.get("ro.cm.version");
+        return SystemProperties.get("ro.modversion");
     }
 
     public static int getInstalledApiLevel() {

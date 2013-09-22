@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2013 The CyanogenMod Project
+<!-- Copyright (C) 2013 The Vanir Project
 
      Licensed under the GNU GPLv2 license
 
@@ -85,7 +85,7 @@
     <string name="no_changelog_alert">Nie je dostupný žiadny záznam zmien</string>
     <string name="failed_to_load_changelog">Nie je možné načítať záznam zmien</string>
     <string name="changelog_dialog_title">Záznam zmien</string>
-    <string name="extension_label">Aktualizácie CyanogenMod</string>
+    <string name="extension_label">Aktualizácie Vanir</string>
     <string name="extension_description">Zobrazí počet nových dostupných aktualizácií.</string>
     <plurals name="extension_status">
         <item quantity="one"><xliff:g id="count">%d</xliff:g> aktualizácia</item>
@@ -93,8 +93,8 @@
         <item quantity="other"><xliff:g id="count">%d</xliff:g> aktualizácií</item>
     </plurals>
     <plurals name="extension_expandedTitle">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> aktualizácia CyanogenMod</item>
-        <item quantity="few"><xliff:g id="count">%d</xliff:g> aktualizácie CyanogenMod</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> aktualizácií CyanogenMod</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> aktualizácia Vanir</item>
+        <item quantity="few"><xliff:g id="count">%d</xliff:g> aktualizácie Vanir</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> aktualizácií Vanir</item>
     </plurals>
 </resources>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012 The CyanogenMod Project
+<!-- Copyright (C) 2012 The Vanir Project
 
      Licensed under the GNU GPLv2 license
 
@@ -83,14 +83,14 @@
     <string name="no_changelog_alert">Ingen ændringslog tilgængelig</string>
     <string name="failed_to_load_changelog">Kan ikke indlæse ændringslog</string>
     <string name="changelog_dialog_title">Ændringslog</string>
-    <string name="extension_label">CyanogenMod-opdateringer</string>
+    <string name="extension_label">Vanir-opdateringer</string>
     <string name="extension_description">Viser antal nye tilgængelige opdateringer.</string>
     <plurals name="extension_status">
         <item quantity="one"><xliff:g id="count">%d</xliff:g> opdatering</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> opdateringer</item>
     </plurals>
     <plurals name="extension_expandedTitle">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> CyanogenMod-opdatering</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> CyanogenMod-opdateringer</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> Vanir-opdatering</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> Vanir-opdateringer</item>
     </plurals>
 </resources>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012-2013 The CyanogenMod Project
+<!-- Copyright (C) 2012-2013 The Vanir Project
 
      Licensed under the GNU GPLv2 license
 
@@ -83,14 +83,14 @@
     <string name="no_changelog_alert">Δεν υπάρχει διαθέσιμο αρχείο αλλαγών</string>
     <string name="failed_to_load_changelog">Δεν είναι δυνατή η φόρτωση του αρχείου αλλαγών</string>
     <string name="changelog_dialog_title">Αρχείο αλλαγών</string>
-    <string name="extension_label">Ενημερώσεις CyanogenMod</string>
+    <string name="extension_label">Ενημερώσεις Vanir</string>
     <string name="extension_description">Εμφανίζει τον αριθμό των διαθέσιμων νέων ενημερώσεων.</string>
     <plurals name="extension_status">
         <item quantity="one"><xliff:g id="count">%d</xliff:g> ενημέρωση</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> ενημερώσεις</item>
     </plurals>
     <plurals name="extension_expandedTitle">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> ενημέρωση CyanogenMod</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> ενημερώσεις CyanogenMod</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> ενημέρωση Vanir</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> ενημερώσεις Vanir</item>
     </plurals>
 </resources>
