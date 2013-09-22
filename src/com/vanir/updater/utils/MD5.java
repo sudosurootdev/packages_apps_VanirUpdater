@@ -39,7 +39,7 @@ public class MD5 {
         Log.v(TAG, "Calculated digest: " + calculatedDigest);
         Log.v(TAG, "Provided digest: " + md5);
 
-        return calculatedDigest.equalsIgnoreCase(md5);
+        return md5.startsWith(calculatedDigest);
     }
 
     public static String calculateMD5(File updateFile) {
