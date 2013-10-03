@@ -7,6 +7,7 @@
      or at https://www.gnu.org/licenses/gpl-2.0.txt
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="conf_update_server_url" translatable="false">http://www.emccann.net/nuclearmistake/VanirAOSPNightlies/</string>
+    <string name="conf_nightly_server_url" translatable="false">http://www.emccann.net/nuclearmistake/VanirAOSPNightlies/</string>
+    <string name="conf_release_server_url" translatable="false">http://www.emccann.net/nuclearmistake/VanirAOSPRelease/</string>
     <bool name="alternateIsInternal">false</bool>
 </resources>

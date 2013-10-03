@@ -232,13 +232,15 @@ public class UpdateCheckService extends IntentService {
         // Get the type of update we should check for
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         //TODO handle releases too!
-        int updateType = prefs.getInt(Constants.UPDATE_TYPE_PREF, 0);        
-        //TODO remove this gross hack to include nightlies regardless of setting
-        updateType += (updateType % 2 == 0) ? 1 : 0;
+        int updateType = prefs.getInt(Constants.UPDATE_TYPE_PREF, 0);
 
         LinkedList<UpdateInfo> lastUpdates = State.loadState(this);
 
-        LinkedList<UpdateInfo> updates = getUpdateInfos(getString(R.string.conf_update_server_url)+Utils.getDeviceType()+"/", updateType);
+        LinkedList<UpdateInfo> updates = getUpdateInfos(getString(R.string.conf_release_server_url)+Utils.getDeviceType()+"/", updateType);
+        if (updateType % 2 != 0) //if the user wants to be notified about nightlies too
+        {
+            updates.addAll(getUpdateInfos(getString(R.string.conf_nightly_server_url)+Utils.getDeviceType()+"/", updateType));
+        }
 
         int newUpdates = 0, realUpdates = 0;
         for (UpdateInfo ui : updates) {
