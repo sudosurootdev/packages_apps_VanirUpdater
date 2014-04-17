@@ -19,7 +19,7 @@ public class Constants {
     public static final String ENABLE_PREF = "pref_enable_updates";
     public static final String BACKUP_PREF = "pref_backup_rom";
     public static final String UPDATE_CHECK_PREF = "pref_update_check_interval";
-    public static final String UPDATE_TYPE_PREF = "pref_update_types";
+    public static final String UPDATE_TYPE_PREF = "vanir_pref_update_types";//"pref_update_types";
     public static final String LAST_UPDATE_CHECK_PREF = "pref_last_update_check";
 
     // Update Check items
@@ -33,8 +33,8 @@ public class Constants {
     public static final int UPDATE_FREQ_MONTHLY = 2419200;
 
     // Update types
-    public static final int UPDATE_TYPE_NEW_STABLE = 0;
-    public static final int UPDATE_TYPE_NEW_NIGHTLY = 1;
-    public static final int UPDATE_TYPE_ALL_STABLE = 2;
-    public static final int UPDATE_TYPE_ALL_NIGHTLY = 3;
+    //public static final int UPDATE_TYPE_NEW_STABLE = 0;
+    public static final int UPDATE_TYPE_NEW_NIGHTLY = 0;//1;
+    //public static final int UPDATE_TYPE_ALL_STABLE = 2;
+    public static final int UPDATE_TYPE_ALL_NIGHTLY = 1;//3;
 }

@@ -263,8 +263,8 @@ public class UpdateCheckService extends IntentService {
     }
 
     private LinkedList<UpdateInfo> getUpdateInfos(String url, int updateType) {
-        boolean includeAll = updateType == Constants.UPDATE_TYPE_ALL_STABLE
-            || updateType == Constants.UPDATE_TYPE_ALL_NIGHTLY;
+        boolean includeAll = updateType == Constants.UPDATE_TYPE_ALL_NIGHTLY;
+            //|| updateType == Constants.UPDATE_TYPE_ALL_STABLE;
         Log.d(TAG, "Looking for updates at "+url+"vanir_update_list");
         LinkedList<String> versions = Utils.readMultilineFile(url+"vanir_updater_list");
         LinkedList<UpdateInfo> infos = new LinkedList<UpdateInfo>();        
