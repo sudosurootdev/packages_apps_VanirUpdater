@@ -152,8 +152,11 @@ public class UpdatesSettings extends PreferenceActivity implements
 
         // Set 'HomeAsUp' feature of the actionbar to fit better into Settings
         final ActionBar bar = getActionBar();
-	if (bar != null)
-	        bar.setDisplayHomeAsUpEnabled(true);
+        try {
+             bar.setDisplayHomeAsUpEnabled(true);
+        } catch(java.lang.NullPointerException ex) {
+             // YOLO
+        }
 
         // Turn on the Options Menu
         invalidateOptionsMenu();
