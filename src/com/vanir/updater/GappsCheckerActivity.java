@@ -62,11 +62,8 @@ public class GappsCheckerActivity extends Activity {
                 | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
             dialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
             dialog.show();
+        } else {
+            finish();
         }
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
     }
 }
