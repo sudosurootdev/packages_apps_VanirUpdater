@@ -17,7 +17,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Environment;
@@ -222,16 +221,5 @@ public class Utils {
         } catch (IOException e) {
         }
         return ret;
-    }
-
-    // it tastes just like it smells.
-    public static boolean areGappsInstalled(Context context) {
-        PackageManager pm = context.getPackageManager();
-        try {
-            pm.getPackageInfo(Constants.GMS_CORE_PKG, PackageManager.GET_ACTIVITIES);
-        } catch (NameNotFoundException e) {
-            return false;
-        }
-        return true;
     }
 }
