@@ -17,10 +17,6 @@
     <uses-permission android:name="android.permission.REBOOT"/>
     <uses-permission android:name="android.permission.ACCESS_CACHE_FILESYSTEM"/>
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
 
     <application
         android:icon="@drawable/ic_launcher"
@@ -50,28 +46,13 @@
             android:excludeFromRecents="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="com.android.settings.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".SendNotifyActivity"
-            android:label="@string/sendnotifyactivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
-            android:enabled="true"
-            android:excludeFromRecents="true"
-            android:launchMode="singleTop" >
-            <intent-filter>
-                <action android:name="com.vanir.updater.SendNotifyActivity" />  
+                <category android:name="com.android.settings.SHORTCUT" />
             </intent-filter>
         </activity>
 
         <service android:name="com.vanir.updater.service.UpdateCheckService" />
 
-        <receiver android:name="com.vanir.updater.receiver.UpdateCheckReceiver"
-            android:label="@string/updatecheckreceiver"
-            android:enabled="true"
-            android:exported="true" >
+        <receiver android:name="com.vanir.updater.receiver.UpdateCheckReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.CHECK_FOR_UPDATES" />
