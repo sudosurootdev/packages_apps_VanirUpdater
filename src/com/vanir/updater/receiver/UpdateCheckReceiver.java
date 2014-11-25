@@ -52,7 +52,6 @@ public class UpdateCheckReceiver extends BroadcastReceiver {
             Log.i(TAG, "Received quicksettings check request");
             Intent i = new Intent(context, UpdateCheckService.class);
             i.setAction(UpdateCheckService.ACTION_CHECK);
-            i.putExtra("isFromQuicksettings", 1);
             context.startService(i);
             return;
         }
