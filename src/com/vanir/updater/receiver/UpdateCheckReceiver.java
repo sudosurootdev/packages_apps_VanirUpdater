@@ -51,7 +51,7 @@ public class UpdateCheckReceiver extends BroadcastReceiver {
         } else if (Intent.ACTION_BOOT_COMPLETED.equals(action)) {
             // We just booted. Store the boot check state
             prefs.edit().putBoolean(Constants.BOOT_CHECK_COMPLETED, false).apply();
-
+        
             // Check for Gapps install && opening message
             Intent i = new Intent(context.getApplicationContext(), SendNotifyActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);

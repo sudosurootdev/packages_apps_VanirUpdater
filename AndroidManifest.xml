@@ -62,7 +62,7 @@
             android:excludeFromRecents="true"
             android:launchMode="singleTop" >
             <intent-filter>
-                <action android:name="com.vanir.updater.SendNotifyActivity" />
+                <action android:name="com.vanir.updater.SendNotifyActivity" />  
             </intent-filter>
         </activity>
 
