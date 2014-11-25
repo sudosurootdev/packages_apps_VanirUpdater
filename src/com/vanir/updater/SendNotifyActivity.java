@@ -33,7 +33,8 @@ import android.view.WindowManager;
 /*
  * Activity to show alert dialogs on keyguard
 */
-public class GappsCheckerActivity extends Activity {
+
+public class SendNotifyActivity extends Activity {
     private static final String GMS_CORE = "com.google.android.gms";
 
     /** Called when the activity is first created. */
