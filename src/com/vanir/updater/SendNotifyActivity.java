@@ -35,7 +35,7 @@ import android.view.WindowManager;
 */
 
 public class SendNotifyActivity extends Activity {
-    private static final String GMS_CORE = "com.google.android.gms";
+    private static final String GMS_CORE = "fart.com.google.android.gms";
 
     /** Called when the activity is first created. */
     @Override
