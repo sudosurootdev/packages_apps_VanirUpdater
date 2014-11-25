@@ -30,15 +30,13 @@ public class UpdateCheckReceiver extends BroadcastReceiver {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         int updateFrequency = prefs.getInt(Constants.UPDATE_CHECK_PREF, Constants.UPDATE_FREQ_WEEKLY);
 
-        // Parse the received action
-        final String action = intent.getAction();
-
+        // Check if we are set to manual updates and don't do anything
         if (updateFrequency == Constants.UPDATE_FREQ_NONE) {
-            if (!Intent.ACTION_CHECK_FOR_UPDATES.equals(action)) {
-                return;
-            }
+            return;
         }
 
+        // Not set to manual updates, parse the received action
+        final String action = intent.getAction();
         if (ConnectivityManager.CONNECTIVITY_ACTION.equals(action)) {
             // Connectivity has changed
             boolean hasConnection = !intent.getBooleanExtra(ConnectivityManager.EXTRA_NO_CONNECTIVITY, false);
