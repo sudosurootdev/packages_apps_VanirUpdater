@@ -78,6 +78,4 @@
     <string name="failed_to_load_changelog">Impossible de charger la note de mise à jour</string>
     <string name="changelog_dialog_title">Note de mise à jour</string>
     <string name="loading_changelog">Chargement\u2026</string>
-    <string name="extension_label">Mises à jour Vanir</string>
-    <string name="extension_description">Affiche le nombre de mises à jour disponibles.</string>
 </resources>

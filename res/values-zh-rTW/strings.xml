@@ -85,14 +85,5 @@
     <string name="failed_to_load_changelog">無法讀取更新日誌</string>
     <string name="changelog_dialog_title">更新日誌</string>
     <string name="loading_changelog">正在讀取中\u2026</string>
-    <string name="extension_label">Vanir 更新</string>
-    <string name="extension_description">顯示可用新更新的數目。</string>
-    <plurals name="extension_status">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g>個更新</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g>個更新</item>
-    </plurals>
-    <plurals name="extension_expandedTitle">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g>個 Vanir更新</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g>個 Vanir更新</item>
-    </plurals>
+
 </resources>

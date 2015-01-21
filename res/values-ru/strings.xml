@@ -109,17 +109,4 @@
     <string name="changelog_dialog_title">Список изменений</string>
     <string name="loading_changelog">Загрузка\u2026</string>
 
-    <!-- DashClock extension strings -->
-    <string name="extension_label">Обновления Vanir</string>
-    <string name="extension_description">Показывает количество доступных обновлений</string>
-    <plurals name="extension_status">
-        <item quantity="one">Доступно <xliff:g id="count">%d</xliff:g> обновление системы</item>
-        <item quantity="few">Доступно <xliff:g id="count">%d</xliff:g> обновления системы</item>
-        <item quantity="other">Доступно <xliff:g id="count">%d</xliff:g> обновлений системы</item>
-    </plurals>
-    <plurals name="extension_expandedTitle">
-        <item quantity="one">Доступно <xliff:g id="count">%d</xliff:g> обновление Vanir</item>
-        <item quantity="few">Доступно <xliff:g id="count">%d</xliff:g> обновления Vanir</item>
-        <item quantity="other">Доступно <xliff:g id="count">%d</xliff:g> обновлений Vanir</item>
-    </plurals>
 </resources>

@@ -85,16 +85,5 @@
     <string name="no_changelog_alert">Nie je dostupný žiadny záznam zmien</string>
     <string name="failed_to_load_changelog">Nie je možné načítať záznam zmien</string>
     <string name="changelog_dialog_title">Záznam zmien</string>
-    <string name="extension_label">Aktualizácie Vanir</string>
-    <string name="extension_description">Zobrazí počet nových dostupných aktualizácií.</string>
-    <plurals name="extension_status">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> aktualizácia</item>
-        <item quantity="few"><xliff:g id="count">%d</xliff:g> aktualizácie</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> aktualizácií</item>
-    </plurals>
-    <plurals name="extension_expandedTitle">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> aktualizácia Vanir</item>
-        <item quantity="few"><xliff:g id="count">%d</xliff:g> aktualizácie Vanir</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> aktualizácií Vanir</item>
-    </plurals>
+
 </resources>

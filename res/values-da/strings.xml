@@ -84,13 +84,5 @@
     <string name="failed_to_load_changelog">Kan ikke indlæse ændringslog</string>
     <string name="changelog_dialog_title">Ændringslog</string>
     <string name="extension_label">Vanir-opdateringer</string>
-    <string name="extension_description">Viser antal nye tilgængelige opdateringer.</string>
-    <plurals name="extension_status">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> opdatering</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> opdateringer</item>
-    </plurals>
-    <plurals name="extension_expandedTitle">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> Vanir-opdatering</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> Vanir-opdateringer</item>
-    </plurals>
+
 </resources>

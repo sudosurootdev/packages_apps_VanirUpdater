@@ -84,13 +84,5 @@
     <string name="failed_to_load_changelog">Δεν είναι δυνατή η φόρτωση του αρχείου αλλαγών</string>
     <string name="changelog_dialog_title">Αρχείο αλλαγών</string>
     <string name="extension_label">Ενημερώσεις Vanir</string>
-    <string name="extension_description">Εμφανίζει τον αριθμό των διαθέσιμων νέων ενημερώσεων.</string>
-    <plurals name="extension_status">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> ενημέρωση</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> ενημερώσεις</item>
-    </plurals>
-    <plurals name="extension_expandedTitle">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> ενημέρωση Vanir</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> ενημερώσεις Vanir</item>
-    </plurals>
+
 </resources>

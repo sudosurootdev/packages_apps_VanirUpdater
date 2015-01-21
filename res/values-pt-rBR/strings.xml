@@ -76,16 +76,7 @@
     <string name="changelog_dialog_title">Registro de mudanças</string>
     <string name="display_name">Atualizações</string>
     <string name="data_connection_required">Uma conexão de dados é necessária</string>
-    <string name="extension_label">Atualizações Vanir</string>
-    <string name="extension_description">Exibir o número de atualizações disponíveis</string>
-    <plurals name="extension_status">
-        <item quantity="one"><xliff:g id="count" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%d</xliff:g> atualização</item>
-        <item quantity="other"><xliff:g id="count" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%d</xliff:g> atualizações</item>
-    </plurals>
-    <plurals name="extension_expandedTitle">
-        <item quantity="one"><xliff:g id="count" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%d</xliff:g> atualização Vanir</item>
-        <item quantity="other"><xliff:g id="count" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%d</xliff:g> atualizações Vanir</item>
-    </plurals>
+
     <plurals name="not_additional_count">
         <item quantity="other">+ <xliff:g id="count" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%d</xliff:g> atualizações</item>
     </plurals>
