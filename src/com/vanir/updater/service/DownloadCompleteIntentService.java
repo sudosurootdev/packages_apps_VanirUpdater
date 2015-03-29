@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 The CyanogenMod Project
+ * Copyright (C) 2014 VanirAOSP
  *
  * * Licensed under the GNU GPLv2 license
  *
@@ -7,7 +7,7 @@
  * or at https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-package com.cyanogenmod.updater.service;
+package com.vanir.updater.service;
 
 import android.app.DownloadManager;
 import android.app.IntentService;
@@ -15,12 +15,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 
-import com.cyanogenmod.updater.R;
-import com.cyanogenmod.updater.UpdateApplication;
-import com.cyanogenmod.updater.UpdatesSettings;
-import com.cyanogenmod.updater.misc.Constants;
-import com.cyanogenmod.updater.receiver.DownloadNotifier;
-import com.cyanogenmod.updater.utils.MD5;
+import com.vanir.updater.R;
+import com.vanir.updater.UpdateApplication;
+import com.vanir.updater.UpdatesSettings;
+import com.vanir.updater.misc.Constants;
+import com.vanir.updater.receiver.DownloadNotifier;
+import com.vanir.updater.utils.MD5;
 
 import java.io.File;
 

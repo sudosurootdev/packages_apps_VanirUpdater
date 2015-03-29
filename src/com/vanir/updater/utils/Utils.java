@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 The CyanogenMod Project
+ * Copyright (C) 2013 VanirAOSP
  *
  * * Licensed under the GNU GPLv2 license
  *
@@ -7,7 +7,7 @@
  * or at https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-package com.cyanogenmod.updater.utils;
+package com.vanir.updater.utils;
 
 import android.app.AlarmManager;
 import android.app.NotificationManager;
@@ -29,9 +29,9 @@ import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.cyanogenmod.updater.R;
-import com.cyanogenmod.updater.misc.Constants;
-import com.cyanogenmod.updater.service.UpdateCheckService;
+import com.vanir.updater.R;
+import com.vanir.updater.misc.Constants;
+import com.vanir.updater.service.UpdateCheckService;
 
 import java.io.File;
 import java.io.IOException;

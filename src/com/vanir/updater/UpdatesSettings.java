@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2012 The CyanogenMod Project (DvTonder)
+ * Copyright (C) 2012 VanirAOSP (DvTonder)
  *
  * * Licensed under the GNU GPLv2 license
  *
@@ -7,7 +7,7 @@
  * or at https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-package com.cyanogenmod.updater;
+package com.vanir.updater;
 
 import android.app.ActionBar;
 import android.app.AlertDialog;
@@ -44,13 +44,13 @@ import android.widget.Toast;
 
 import com.android.internal.util.cm.ScreenType;
 
-import com.cyanogenmod.updater.misc.Constants;
-import com.cyanogenmod.updater.misc.State;
-import com.cyanogenmod.updater.misc.UpdateInfo;
-import com.cyanogenmod.updater.receiver.DownloadReceiver;
-import com.cyanogenmod.updater.service.UpdateCheckService;
-import com.cyanogenmod.updater.utils.UpdateFilter;
-import com.cyanogenmod.updater.utils.Utils;
+import com.vanir.updater.misc.Constants;
+import com.vanir.updater.misc.State;
+import com.vanir.updater.misc.UpdateInfo;
+import com.vanir.updater.receiver.DownloadReceiver;
+import com.vanir.updater.service.UpdateCheckService;
+import com.vanir.updater.utils.UpdateFilter;
+import com.vanir.updater.utils.Utils;
 
 import java.io.File;
 import java.io.IOException;
