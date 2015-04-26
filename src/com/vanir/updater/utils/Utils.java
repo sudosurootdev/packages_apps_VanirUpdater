@@ -266,4 +266,9 @@ public class Utils {
     public static boolean isTablet(Context context) {
         return getScreenType(context) == DEVICE_TABLET;
     }
+
+    public static boolean hasLeanback(Context context) {
+        PackageManager packageManager = context.getPackageManager();
+        return packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK);
+    }
 }

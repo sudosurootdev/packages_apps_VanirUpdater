@@ -52,6 +52,21 @@
 
         <service android:name="com.vanir.updater.service.UpdateCheckService" />
 
+        <activity
+            android:name=".UpdatesSettingsTv"
+            android:theme="@style/Theme.Tv"
+            android:launchMode="singleTop"
+            android:hardwareAccelerated="true"
+            android:label="@string/display_name"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+        </activity>
+
+
         <receiver android:name="com.vanir.updater.receiver.UpdateCheckReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
