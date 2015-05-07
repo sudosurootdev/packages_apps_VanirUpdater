@@ -104,6 +104,7 @@
 
     <!-- System info strings -->
     <string name="sysinfo_device">Device:</string>
+    <string name="sysinfo_update_channel">Update channel:</string>
     <string name="sysinfo_running">Running:</string>
     <string name="sysinfo_last_check">Last check:</string>
 
