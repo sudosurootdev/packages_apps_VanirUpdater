@@ -74,12 +74,6 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name="com.vanir.updater.receiver.CheckFinishReceiver">
-            <intent-filter>
-                <action android:name="com.vanir.vanirupdater.action.UPDATE_CHECK_FINISHED"/>
-            </intent-filter>
-        </receiver>
-
     </application>
 
 </manifest>
