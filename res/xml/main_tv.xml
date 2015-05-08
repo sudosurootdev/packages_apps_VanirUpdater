@@ -27,6 +27,14 @@
          android:entries="@array/update_check_entries"
          android:entryValues="@array/update_check_values"/>
 
+     <ListPreference
+         android:key="vanir_pref_update_types"
+         android:persistent="false"
+         android:dialogTitle="@string/update_type_title"
+         android:title="@string/update_type_title"
+         android:entries="@array/vanir_update_type_entries"
+         android:entryValues="@array/vanir_update_type_values"/>
+
     <PreferenceCategory
         android:key="updates_category"
         android:title="@string/available_updates_title">
