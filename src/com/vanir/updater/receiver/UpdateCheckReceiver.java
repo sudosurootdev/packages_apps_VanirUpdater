@@ -60,7 +60,6 @@ public class UpdateCheckReceiver extends BroadcastReceiver {
             } else {
                 // Nothing to do
                 Log.i(TAG, "On-boot update check was already completed.");
-                return;
             }
         } else if (updateFrequency > 0) {
             Log.i(TAG, "Scheduling future, repeating update checks.");
