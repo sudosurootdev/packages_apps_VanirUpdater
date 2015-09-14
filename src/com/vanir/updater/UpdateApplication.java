@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2012 The Vanir Project (DvTonder)
+ * Copyright (C) 2012 The CyanogenMod Project (DvTonder)
  *
  * * Licensed under the GNU GPLv2 license
  *

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2012 The Vanir Project
+ * Copyright (C) 2012 The CyanogenMod Project
  *
  * * Licensed under the GNU GPLv2 license
  *
