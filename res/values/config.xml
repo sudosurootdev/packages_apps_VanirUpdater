@@ -7,7 +7,7 @@
      or at https://www.gnu.org/licenses/gpl-2.0.txt
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="conf_nightly_server_url" translatable="false">https://sudosurootdev.com/builds/m6/</string>
-    <string name="conf_release_server_url" translatable="false">https://sudosurootdev.com/builds/releases/</string>
+    <string name="conf_nightly_server_url" translatable="false">https://vanir.rocks/builds/m6/</string>
+    <string name="conf_release_server_url" translatable="false">https://vanir.rocks/builds/releases/</string>
     <bool name="alternateIsInternal">false</bool>
 </resources>
